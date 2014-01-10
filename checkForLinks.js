@@ -1,5 +1,19 @@
 function getAllArgosLinks()
 {
+	if (document.URL.indexOf("argos.ie"))
+	{
+		console.log("CheckArgos Extension: On Argos page, will do something else in the future");
+		//TODO on argos' page, do something else
+		return;
+	}
+	
+	if(document.URL.indexOf("checkargos.com"))
+	{
+		console.log("CheckArgos Extension: On checkargos already!");
+		//Cant change links on checkargos, how would users get to argos!
+		return;
+	}
+	
 	var linksFound = false;
 	var links = document.getElementsByTagName("a");
 	for(var i=0; i<links.length; i++) {
