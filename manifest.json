@@ -1,0 +1,17 @@
+{
+  "name": "Checkargos.com Helper",
+  "description": "Detects any links to Argos.ie and provides a link to Checkargos.com to quickly check stock in your area.",
+  "version": "0.1",
+  "manifest_version": 2,
+  "icons": { "128": "Logo128.png" },
+  "permissions": [
+    "tabs"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["checkForLinks.js"]
+    }
+  ]
+
+}
